@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+ 
+@media only screen and (max-width: 600px) {
+    .left-container, .right-container {
+        flex-direction: column;
+    }
+    .right-container-data-box {
+        display: flex;
+        flex-direction: column;
+    }
+ }
+ 
+ 

@@ -1,0 +1,367 @@
+.right-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-nav-bar{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;  
+}
+
+.nav-bar-tabs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.today{
+    margin-right: 10px;
+    color: #c5c5c5;
+}
+.today:hover{
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.today-active{
+    color: #1a1a1a;
+}
+
+.recent{
+    color: #c5c5c5;
+}
+.recent:hover{
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.recent-active{
+    color: #1a1a1a;
+}
+
+.underline{
+    width: 40px;
+    height: 1px;
+    background-color: #1a1a1a;
+    margin-top: 1.2rem;
+}
+.underline-today{
+    transform: translate3d(-240%,0,0);
+    transition: 100ms;
+}
+.underline-recent{
+    transform: translate3d(-100%,0,0);
+    transition: 100ms;
+}
+
+.nav-bar-matric{
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.celsius{
+    border-radius: 500px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+}
+.fahrenheit{
+    border-radius: 500px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.celsius:hover{
+    color: #ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+.fahrenheit:hover{
+    color: #ffffff;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+.celsius-active{
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+.fahrenheit-active{
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+.profile-image img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* ********************************************************************************* */
+
+.right-container-data-box{
+    flex: 12;
+    display: flex;
+    margin: 30px;
+    margin-top: 10px;
+}
+
+.right-container-cards{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card{
+    width: 75px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+    font-weight: 500;
+}
+.card-day{
+    margin: 5px;
+    margin-top: 7px;
+}
+
+.card-temp-img img{
+    width: 40px;
+    height: 40px;
+}
+.card-temp-value{
+    margin: 5px;
+}
+
+.right-container-recent-research{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajout de styles pour la liste des recherches récentes */
+.right-container-recent-research ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-container-recent-research li {
+    margin-bottom: 5px;
+}
+
+.right-container-todays-highlight{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 500px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.right-container-todays-highlight-title{
+    margin-left: 5px;
+    margin-bottom: 20px;
+    flex: 2;
+    font-size: medium;
+    font-weight: bold;
+}
+.right-container-todays-highlight-cards{
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.right-container-todays-highlight-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 180px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.right-container-todays-highlight-card-title{
+    flex: 1;
+    color: #c9c9c9;
+    font-size: small;
+    font-weight: 500;
+    align-self: self-start;
+    margin-left: 20px;
+}
+
+.gauge{
+    margin-top: -20px;
+    flex: 2;
+    width: 70%;
+    max-width: 180px;
+    font-size: 32px;
+    color: #004033;
+    font-weight: 500;
+}
+
+.gauge__body{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge__fill{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ffbf5e;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+    margin-bottom: -30px;
+}
+
+.gauge__cover{
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.right-container-todays-highlight-value{
+    flex: 1;
+    margin-top: -35px;
+    font-size: xx-large;
+    font-weight: 500;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.wind-status-value{
+    flex: 2;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    align-self: self-start;
+    margin-left: 20px;
+}
+.unit{
+    font-size: 16px;
+}
+.wind-status-logo{
+    flex: 1;
+    align-self: self-start;
+    margin-left: 20px;
+}
+
+.wind-status-logo img{
+    width: 20px;
+    height: 20px;
+
+}
+.sunrise-sunset-value{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sunrise{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.sunrise-img{
+    flex: 1;
+}
+
+.sunrise-img img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.sunrise-time{
+    flex: 4;
+    font-size: 16px;
+}
+
+.sunset{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.sunset-img{
+    flex: 1;
+}
+
+.sunset-img img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.sunset-time{
+    flex: 4;
+    font-size: 16px;
+}
+
+.humidity-summary{
+    align-self: self-start;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: small;
+    font-weight: 500;
+}

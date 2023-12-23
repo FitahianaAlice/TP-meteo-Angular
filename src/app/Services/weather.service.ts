@@ -19,10 +19,10 @@ export class WeatherService {
   locationDetails?: LocationDetails;
   weatherDetails?: WeatherDetails;
 
-  temperatureData: TemperatureData = new TemperatureData();
+  temperatureData: TemperatureData;
 
   todayData?: TodayData[] = [];
-  todaysHighlights: TodaysHighlights = new TodaysHighlights();
+  todaysHighlights: TodaysHighlights;
 
   cityName:string ='Antananarivo';
   language:string ='en-US';
@@ -32,7 +32,7 @@ export class WeatherService {
   currentTime:Date;
 
   today:boolean = false;
-  recent:boolean = true;
+  recent:boolean = false;
 
   celsius:boolean = true;
   fahrenheit:boolean = false;
@@ -137,6 +137,9 @@ export class WeatherService {
   }
 
   getData(){
+    this.todayData = [];
+    this.temperatureData = new TemperatureData();
+    this.todaysHighlights = new TodaysHighlights();
     var latitude = 0;
     var longitude = 0;
 
@@ -157,6 +160,10 @@ export class WeatherService {
     });
 
   }
+  onRecentClick() {
+    this.recent = true;
+ }
+ 
 }
 
 

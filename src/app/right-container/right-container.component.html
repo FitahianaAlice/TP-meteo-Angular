@@ -20,11 +20,11 @@
                 <div class="card-temp-value">{{this.weatherService.celsius == true ? card.temperature : this.weatherService.celsiusToFahrenheit(card.temperature)}}</div>
             </div>
         </div>
-        <div class="right-container-recent-research" *ngIf="this.weatherService.recent == true">
+        <div class="right-container-recent-research" *ngIf="weatherService.recent">
             <ul>
                 <li *ngFor="let search of recentSearches">{{ search }}</li>
             </ul>
-        </div>
+         </div>         
     </div>
     <div class="right-container-todays-highlight">
         <div class="right-container-todays-highlight-title">Today's Highlight</div>
@@ -49,11 +49,11 @@
                 <div class="sunrise-sunset-value">
                     <div class="sunrise">
                         <div class="sunrise-img"><img src="../../assets/sunrise.png" alt="sunrise"></div>
-                        <div class="sunrise-time">6:35 AM</div>
+                        <div class="sunrise-time">{{this.weatherService.todaysHighlights.sunrise}} AM</div>
                     </div>
                     <div class="sunset">
                         <div class="sunset-img"><img src="../../assets/sunset.png" alt="sunset"></div>
-                        <div class="sunset-time">5:42 PM</div>
+                        <div class="sunset-time">{{this.weatherService.todaysHighlights.sunset}} PM</div>
                     </div>
                 </div>
             </div>
@@ -61,17 +61,17 @@
         <div class="right-container-todays-highlight-cards">
             <div class="right-container-todays-highlight-card">
                 <div class="right-container-todays-highlight-card-title">Humidity</div>
-                <div class="wind-status-value">12 <sup class="unit">%</sup></div>
+                <div class="wind-status-value">{{this.weatherService.todaysHighlights.humdity}}<sup class="unit">%</sup></div>
                 <div class="humidity-summary">Normal <span>👍</span></div>
             </div>
             <div class="right-container-todays-highlight-card">
                 <div class="right-container-todays-highlight-card-title">Visibility</div>
-                <div class="wind-status-value">5.2 <span class="unit">km</span></div>
+                <div class="wind-status-value">{{this.weatherService.todaysHighlights.visibility}} <span class="unit">km</span></div>
                 <div class="humidity-summary">Average <span>🙁</span></div>
             </div>
             <div class="right-container-todays-highlight-card">
                 <div class="right-container-todays-highlight-card-title">Air Quality</div>
-                <div class="wind-status-value">105</div>
+                <div class="wind-status-value">{{this.weatherService.todaysHighlights.airQuality}}</div>
                 <div class="humidity-summary">Unhealthy <span>👎</span></div>
             </div>
         </div>

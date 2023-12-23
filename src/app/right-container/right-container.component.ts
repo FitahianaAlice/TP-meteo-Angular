@@ -1,6 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { WeatherService } from '../Services/weather.service';
+import { SearchHistoryService } from '../Services/search-history.service';
 
 @Component({
   selector: 'app-right-container',
@@ -11,9 +12,10 @@ import { WeatherService } from '../Services/weather.service';
 })
 export class RightContainerComponent {
 
-  constructor(public weatherService: WeatherService){};
+  recentSearches: string[] = this.searchHistoryService.getRecentSearches();
+recent: any;
 
-  recentSearches: string[] = ['Antananarivo, Madagascar', 'Antsiranana, Madagascar', 'Paris, France'];
+  constructor(public weatherService: WeatherService,private searchHistoryService: SearchHistoryService){};
 
   onTodayClick(){
     this.weatherService.recent = false;
@@ -32,4 +34,10 @@ export class RightContainerComponent {
     this.weatherService.fahrenheit = true;
     this.weatherService.celsius = false;
   }
+  onSearch(location: string) {
+    // Perform the search...
+   
+    // Then add the search to the history
+    this.searchHistoryService.addSearch(location);
+   }
 }
